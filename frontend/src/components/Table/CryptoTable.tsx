@@ -17,8 +17,8 @@ function CryptoTable() {
 
     const rows = data["data" as unknown as number]?.map((value: ICrypto) => {
         const quoteUsdProperties = value.quote['USD']
-        const marketCapProgressBar = <Progress size="xl" radius="md" value={quoteUsdProperties.market_cap_dominance}
-                                               color='lime'/>
+        const marketCapProgressBar = <Progress size="xl" radius="md" value={quoteUsdProperties.market_cap_dominance} />
+
         return (
             <tr>
                 <td>{value.name}</td>
