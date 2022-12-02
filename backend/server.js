@@ -17,13 +17,11 @@ new Promise(async (resolve, reject) => {
     } catch (ex) {
         response = null;
         // error
-        console.log(ex);
         reject(ex);
     }
     if (response) {
         // success
         const json = response.data;
-        console.log(json);
         resolve(json);
     }
 });
