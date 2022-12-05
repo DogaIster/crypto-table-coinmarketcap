@@ -13,7 +13,9 @@ function CryptoTable() {
     }
 
     useEffect(() => {
-        getData()
+        getData();
+        const intervalId = setInterval(getData, 60000);
+        return () => clearInterval(intervalId);
     }, []);
 
     const rows = data["data" as unknown as number]?.map((value: ICrypto) => {
